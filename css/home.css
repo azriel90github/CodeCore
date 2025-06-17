@@ -1,0 +1,159 @@
+section.home {
+  min-height: 80vh;
+  padding: 9rem 7% 2rem;
+}
+
+.home {
+  background-image: url(../img/bg.png);
+  display: flex;
+  gap: 3rem;
+}
+
+.home .home-content {
+  max-width: 44rem;
+}
+
+.home-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color9);
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 450;
+  line-height: 4.7rem;
+}
+
+.text-degrade {
+  background-image: linear-gradient(to right, #18d3fd , #0767AC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color9);
+}
+
+.home-content h4 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: var(--color9);
+  padding-top: 1rem;
+  font-weight: 700;
+}
+
+.home-content p {
+  font-size: 18px;
+  margin-bottom: .8rem;
+  color: var(--color5);
+  line-height: 30px;
+  font-weight: 450;
+}
+
+.btns {
+  width: 50%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btns:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+
+.btn {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: var(--color4);
+  padding: 0.9rem 1.6rem 0.9rem 1.7rem;
+  border: none;
+  border-radius: 2rem;
+  color: var(--color1);
+  font-size: 1rem;
+  cursor: pointer;
+  /*box-shadow: 1px 1px 30px var(--color3);*/
+}
+
+.btn:hover {
+  background-color: var(--color3);
+  color: var(--color1);
+  transition: .6s;
+}
+
+.btn i {
+  font-size: 2rem;
+}
+
+.foto-perfil img {
+  margin: auto;
+  padding-top: 3.3rem;
+  width: 100%;
+}
+
+.foto-perfil img {
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animar-slide-right {
+  animation: slideRight 1s ease-out forwards;
+}
+
+
+.foto-perfil img {
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .btns {
+    width: 100%;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foto-perfil img {
+    width: 100%;
+    height: 30vh;
+    padding-top: 2rem;
+  }
+}
+
+
+

@@ -1,27 +1,619 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeCore</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/import.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/contactos.css">
+  <link rel="stylesheet" href="css/scroller.css">
+  <link rel="stylesheet" href="css/formacoes.css">
+  <link rel="stylesheet" href="css/formadores.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Cursos - Code</title>
 </head>
-<body>
-  <header>
+  <body>
 
-  </header>
-  <main>
-    <section>
+    <header>
 
-    </section>
-    <section>
+      <a href="#" class="logo"><i class='bx bx-code-curly' style='color:#ffffff' ></i>Cursos.Code</a>
 
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#formacoes">Formações</a>
+        <a href="#formadores">Formadores</a>
+        <a href="#formacoes" class="botão">
+          <p>Cursos</p>
+          <p class="number">9</p>
+        </a>
+      </nav>
+
+      <div class="idiomas">
+
+        <span class="hora">
+            <span id="hour">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </span> 
+
+        <a href="#formacoes">
+          <p>Cursos</p>
+          <p class="number">9</p>
+        </a>
+        
+      </div> 
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+    </header>
+
+    <main>
+      <!--Seção home------------------------->
+      <section class="home animar-slide-right" id="home">
+        <div class="home-content">
+            <h3>cursos.code</h3>
+            <h1 class="text-degrade">Aprende a programar como um mestre...</h1>
+            <h4>Nossa missão</h4>
+            <p>
+              Nossa missão é capacitar pessoas com conhecimento técnico de alta qualidade, combinando teoria e prática para formar profissionais preparados para os desafios do mercado de trabalho.
+            </p>
+            <p>
+              Como diz Samuel Backett "Sempre tentando, sempre falhando, não importa, tente novamente, falhe novamente e falhe melhor."
+            </p>
+            
+            <div class="btns">
+              <a href="#inscrever-se" class="btn piscando">Começar Agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></a>
+            </div>
+        </div>
+    
+        <div class="foto-perfil">
+          <img id="img-perfil" src="svg/undraw_dev-focus_dd7i.svg" alt="Imagem de perfil">
+        </div>
+        
+        
+        <script>
+          const imagens = [
+            "svg/undraw_mobile-development_tjxm.svg",
+            "svg/undraw_code-inspection_z688.svg",
+            "svg/undraw_code-review_ept3.svg",
+            "svg/undraw_develop-app_yg6p.svg",
+            "svg/undraw_in-the-zone_07y7.svg",
+            "svg/undraw_mobile-application_lhsq.svg",
+            "svg/undraw_flutter-dev_c8s7.svg",
+            "svg/undraw_modern-design_yur1.svg",
+            "svg/undraw_my-workspace_5961.svg",
+            "svg/undraw_dev-focus_dd7i.svg",
+            "svg/03.svg",
+            "svg/02.svg",
+            "svg/undraw_progressive-app_9517.svg",
+            "svg/undraw_react_ytu4.svg",
+            "svg/undraw_hacker-mind_j91b.svg",
+            "svg/undraw_dev-focus_dd7i.svg",
+            "svg/04.svg",
+            "svg/05.svg",
+            "svg/06.svg",
+            "svg/07.svg",
+            "svg/08.svg",
+            "svg/09.svg",
+            "svg/10.svg",
+            "svg/11.svg",
+          ];
+        
+          const imgElemento = document.getElementById("img-perfil");
+          let indexAtual = 0;
+        
+          setInterval(() => {
+            // Aplica fade-out
+            imgElemento.classList.add("invisivel");
+        
+            setTimeout(() => {
+              // Atualiza índice
+              indexAtual = (indexAtual + 1) % imagens.length;
+        
+              // Troca imagem
+              imgElemento.src = imagens[indexAtual];
+        
+              // Pequeno delay para garantir que o fade-in funcione corretamente
+              setTimeout(() => {
+                imgElemento.classList.remove("invisivel");
+              }, 50); // Esse delay ajuda o navegador a "reconhecer" a transição
+            }, 500); // Bate com o tempo da transição do CSS
+          }, 3000);
+        </script>
+        
     </section>
-    <section>
-      
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2023 CodeCore. All rights reserved.</p>
-  </footer>
-</body>
+      <!--Scroller---------------->
+      <div class="tech-rotate scroller" data-speed="fast">
+        <div class="tag-list scroller__inner">
+            <i class='bx bxl-java'></i>
+            <i class='bx bxl-flutter'></i>
+            <i class='bx bxl-django'></i>
+            <i class='bx bxl-android'></i>
+            <i class='bx bxl-angular'></i>
+            <i class='bx bxl-vuejs'></i>
+            <i class='bx bxl-visual-studio'></i>
+            <i class='bx bxl-nodejs'></i>
+            <i class='bx bxl-git'></i>
+            <i class='bx bxl-apple'></i>
+            <i class='bx bxl-aws'></i>
+            <i class='bx bx-code-curly'></i>
+            <i class='bx bxl-windows'></i>
+            <i class='bx bxl-jquery'></i>
+            <i class='bx bxl-react'></i>
+            <i class='bx bxl-typescript'></i>
+            <i class='bx bxl-unity'></i>
+            <i class='bx bxl-postgresql'></i>
+            <i class='bx bxl-docker'></i>
+            <i class='bx bxl-tailwind-css'></i>
+            <i class='bx bxl-microsoft'></i>
+        </div>
+      </div>
+
+
+      <section class="formacoes" id="formacoes">
+        <h1 class="text-degrade">Cursos</h1>
+
+        <div id="serviços">
+          <div class="serviços">
+              <div class="serv">
+                  <p class="content-img">
+                      <img src="img/react.jpeg" alt="photoshop">
+                  </p>
+                  <div id="suporte">
+                      <h4>React JS<i class='bx bx-code-curly'></i></h4>
+                      <p>
+                        Aprenda de forma simples, rápida e prática a usar React com Hooks e Redux para suas aplicações web.
+                      </p>
+                  </div>
+
+                  
+                  <div class="final-serv">
+                  
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                        </svg>
+                      </div>
+
+                      US$ 13,99
+                  </div>
+                  <a href="https://www.udemy.com/course/react-completo-do-basico-ao-avancado/?couponCode=JUST4U02223"  target="_blank" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+              </div>
+          </div>
+
+          <!--  
+            <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/php.jpg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>PHP7<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Aprenda e descubra como criar páginas web do básico ao avançado com layouts responsivao e atraentes.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    Gratuito
+                </div>
+                <a href="#contacto" class="selecionar-pacote"><button >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></button></a>
+            </div>
+           </div>
+           -->
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/laravel.jpg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Laravel<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Domine Laravel e PHP do zero até conceitos avançados como Eloquent, Relacionamentos, Filas e etc.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 10,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/laravel-pro-do-basico-ao-avancado/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+          <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/ubuntu.jpg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Ubuntu<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Aprenda a implementar e administrar os principais Servidores de Rede com Ubuntu Server.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 13,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/ubuntu-server-administrando-servidores-linux/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/java.jpg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Java<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Curso mais didático e completo de Java e OO, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate, MySQL, MongoDB e muito mais.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 17,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/java-curso-completo/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/python.png" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Python<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Do Básico à Programação Orientada a Objeto, Análise de Dados e Machine Learning com Projetos Práticos.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 10,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/programacao-em-python-do-basico-ao-avancado/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/vue.jpeg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Vue JS<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Domine o framework JavaScript Front-end que combina o melhor do React e o melhor do Angular
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 10,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/desenvolvimento-web-avancado-com-vue-strapi-vuex-e-vuetify/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/angular.jpeg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Angular JS<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Formação Angular Básico ao Avançado, coloque suas habilidades Angular em ação com este mergulho abrangente no Angular.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                  US$ 13,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/curso-de-angular/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/dart.png" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Flutter<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Um Curso Completo Para Aprender Google Flutter e Dart Para a Construção de Apps Nativas Para iOS e Android.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 18,99 
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/curso-flutter/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+
+           <div class="serviços">
+            <div class="serv">
+                <p class="content-img">
+                    <img src="img/mongodb.jpg" alt="photoshop">
+                </p>
+                <div id="suporte">
+                    <h4>Mongo DB<i class='bx bx-code-curly'></i></h4>
+                    <p>
+                      Aprenda tudo sobre MongoDB, NoSQL e Mongoose, do básico ao avançado e criando projetos práticos.
+                    </p>
+                </div>
+
+                
+                <div class="final-serv">
+                
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.788 1.402 8.168L12 18.896l-7.336 3.871 1.402-8.168L.132 9.211l8.2-1.193L12 .587z"/>
+                      </svg>
+                    </div>
+
+                    US$ 13,99
+                </div>
+                <a target="_blank" href="https://www.udemy.com/course/mongodb-do-basico-ao-avancado-c-mongoose-e-projetos/?couponCode=JUST4U02223" class="selecionar-pacote"><p >Assistir agora<i class='bx bxl-youtube' style='color:#ffffff' ></i></p></a>
+            </div>
+           </div>
+        </div>
+        
+      </section>
+
+      <section class="formadores" id="formadores">
+        <h1 class="text-degrade">Formadores</h1>
+
+        <div class="formadores-content">
+
+          
+          <div class="formador">
+            <div class="formador-img-5">
+
+            </div>
+            <h4>Maike Brito </h4>
+            <p class="function">Software Engineer</p>
+            <p class="facu">Engenharia Informática</p>
+          </div>
+
+          <div class="formador">
+            <div class="formador-img-2">
+
+            </div>
+            <h4>Giulia Bordignon</h4>
+            <p class="function">DevOps Engineer</p>
+            <p class="facu">Engenharia Informática</p>
+          </div>
+
+          <div class="formador">
+            <div class="formador-img-3">
+
+            </div>
+            <h4>Gustavo Guanabara</h4>
+            <p class="function">Backend Sénior</p>
+            <p class="facu">Ciências da Computação</p>
+          </div>
+
+          <div class="formador">
+            <div class="formador-img-1">
+
+            </div>
+            <h4>Diego Fernandes</h4>
+            <p class="function">Full Stack Developer</p>
+            <p class="facu">Engenharia Informática</p>
+          </div>
+
+          <div class="formador">
+            <div class="formador-img-4">
+
+            </div>
+            <h4>Ana Neri</h4>
+            <p class="function">Frontend Sénior</p>
+            <p class="facu">Ciências da Computação</p>
+          </div>
+
+      </section>
+
+
+    </main>
+
+    <footer>
+      <div>
+        <h1 class="text-degrade">Contactos</h1>
+
+        <p>Tel 1 - 932101903</p>
+        <p>Tel 2 - 958181809</p>
+
+        <h2 class="text-degrade">Email</h2>
+
+        <p>Email 1 - azrielgithub@gmail.com</p>
+        <p>Email 2 - azrielmoreira@gmail.com</p>
+
+        <h2 class="text-degrade">Endereço</h2>
+
+        <p>
+          Escola Capossoca, Estrada Direita da Samba <br>
+          Trirumo Luanda, Angola
+        </p>
+      </div>
+      <div>
+        <h1 class="text-degrade">Páginas</h1>
+        <p>
+          <a href="#home"><i class='bx bx-link-alt'></i>Inicio</a>
+          <a href="#formacoes"><i class='bx bx-link-alt'></i>Formações</a>
+          <a href="#formadores"><i class='bx bx-link-alt'></i>Formadores</a>
+        </p>
+
+        <p>
+          <a href="https://react.dev/" target="_blank"><i class='bx bx-link-alt'></i>React</a>
+          <a href="https://www.alura.com.br/" target="_blank"><i class='bx bx-link-alt'></i>Alura</a>
+          <a href="https://roadmap.sh/" target="_blank"><i class='bx bx-link-alt'></i>Roadmap</a>
+          <a href="https://www.w3schools.com/" target="_blank"><i class='bx bx-link-alt'></i>W3School</a>
+          <a href="https://www.rocketseat.com.br/" target="_blank"><i class='bx bx-link-alt'></i>Rocketseat</a>
+          <a href="https://www.youtube.com/watch?v=M5QY2_8704o&t=5642s" target="_blank"><i class='bx bx-link-alt'></i>Code music</a>
+          <a href="https://www.gameshopangola.com/" target="_blank"><i class='bx bx-link-alt'></i>GameShop</a>
+          <a href="https://www.ncrangola.com/" target="_blank"><i class='bx bx-link-alt'></i>NCR angola</a>
+        </p>
+
+      </div>
+      <div>
+        <h1 class="text-degrade">Social</h1>
+        <p>
+          <i class='bx bxl-instagram'></i>
+          <i class='bx bxl-linkedin'></i>
+          <i class='bx bxl-github'></i>
+          <i class='bx bxl-twitter'></i>
+          <i class='bx bxl-whatsapp'></i>
+        </p>
+      </div>
+    </footer>
+
+    <div class="final">
+      <p>Todos os Direitos Reservados por Cursos.Code</p>
+    </div>
+
+  </body>
+
+  <script src="js/menu.js"></script>
+  <script src="js/relogio.js"></script>
+  <script src="js/scroller.js"></script>
+  <script src="js/form.js"></script>
 </html>

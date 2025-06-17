@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Mont;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  /*box-shadow: 1px 1px 30px var(--color3);*/
+  background-color: var(--color3);
+  backdrop-filter: blur(10px);
+  color: var(--color5);
+  position: fixed;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  transition: .5s;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar .botão {
+  width: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color4);
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  color: var(--color1);
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+
+.navbar .botão .number {
+  color: var(--color8);
+}
+
+.navbar .botão:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+  transition: .2s;
+}
+
+.navbar a {
+  gap: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color5);
+}
+
+.navbar a:hover {
+  color: var(--color1);
+  transition: .5s;
+}
+
+.idiomas {
+  display: flex;
+  align-items: center;
+}
+
+.idiomas a {
+  text-decoration: none;
+  width: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color4);
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  color: var(--color1);
+  font-size: 1rem;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 1px 1px 30px var(--color3);
+}
+
+.idiomas a .number {
+  color: var(--color8);
+}
+
+.idiomas a:hover {
+  background-color: var(--color2);
+  color: var(--color1);
+  transition: .2s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--color5);
+}
+
+.logo i {
+  font-size: 1.7rem;
+  color: var(--color1);
+}
+
+.hora {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.hora span {
+  color: var(--color5);
+}
+
+#menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: var(--color2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: none;
+}
+
+#menu-icon {
+  display: block;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.idiomas a {
+  display: none;
+}
+
+.navbar .botão {
+  margin-top: 1.5rem;
+  display: flex;
+  width: 70%;
+  font-weight: 500;
+}
+
+.hora {
+  display: none;
+}
+
+.navbar.active {
+  display: block;
+}
+
+.navbar a {
+  padding: 0.5rem;
+  display: flex;
+  font-size: 20px;
+}
+}
