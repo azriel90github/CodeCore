@@ -3,8 +3,9 @@
 }
 
 .tech-rotate i {
-  color: var(--color4);
+  color: var(--color3);
   font-size: 4rem;
+  text-shadow: 1px 1px 30px var(--color3);
 }
 
 .itens-rotate {

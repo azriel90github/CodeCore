@@ -9,8 +9,7 @@ html {
 }
 
 header {
-  /*box-shadow: 1px 1px 30px var(--color3);*/
-  background-color: var(--color3);
+  /*border-bottom: 1px solid var(--color3);*/
   backdrop-filter: blur(10px);
   color: var(--color5);
   position: fixed;
@@ -34,15 +33,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color4);
+  background-color: var(--color3);
   padding: 1rem 1.5rem 1rem 1.5rem;
   border: none;
   border-radius: 2rem;
   color: var(--color1);
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-left: 10px;
   cursor: pointer;
   display: none;
+  box-shadow: 1px 1px 30px var(--color3);
 }
 
 
@@ -51,8 +51,7 @@ header {
 }
 
 .navbar .botão:hover {
-  background-color: var(--color2);
-  color: var(--color1);
+  transform: scale(1.05);
   transition: .2s;
 }
 
@@ -80,7 +79,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color4);
+  background-color: var(--color3);
   padding: 1rem 1.5rem 1rem 1.5rem;
   border: none;
   border-radius: 2rem;
@@ -93,13 +92,15 @@ header {
 }
 
 .idiomas a .number {
-  color: var(--color8);
+    color: var(--color8);
+    transform: scale(1.05);
+    transition: .2s;
 }
 
 .idiomas a:hover {
-  background-color: var(--color2);
   color: var(--color1);
   transition: .2s;
+  transform: scale(1.05);
 }
 
 .logo {
