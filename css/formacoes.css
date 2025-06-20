@@ -25,6 +25,7 @@ section.formacoes {
     transform: scale(1.01);
 }
 
+
 .serviços {
     box-shadow: 1px 1px 10px var(--color5);
     /*border: var(--color5) 1px solid;*/
@@ -159,13 +160,16 @@ section.formacoes {
 }
 
 .final-serv  {
-    color: var(--color8);
     font-weight: 100;
     font-size: 1rem;
 }
 
-.final-serv i  {
-    font-size: 2rem;
+.disponivel {
+    color: var(--color8);
+}
+
+.indisponivel {
+    color: var(--color11);
 }
 
 @media (max-width: 768px) {
