@@ -194,7 +194,7 @@ section.formacoes {
 
     #serviços {
         grid-template-columns: 100%;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .serviços  .serv .content-preço {
