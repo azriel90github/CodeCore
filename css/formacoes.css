@@ -26,8 +26,8 @@ section.formacoes {
 }
 
 .serviços {
-    box-shadow: 1px 1px 15px var(--color5);
-    border: var(--color5) 1px solid;
+    box-shadow: 1px 1px 10px var(--color5);
+    /*border: var(--color5) 1px solid;*/
     border-radius: 2rem;
     display: flex;
     /*background-color: var(--color3);*/
@@ -53,7 +53,7 @@ section.formacoes {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--color7);
+    color: var(--color10);
     font-size: 23px;
     padding-bottom: 1rem;
     font-weight: 700;
